@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  basketdb:
+    image: redis
+  rabbitmq:
+    image: rabbitmq:3.9.5-management
+  basket.api:
+    image: basket_api_image
+    build:
+      context: .
+      dockerfile: Basket.API/Dockerfile
